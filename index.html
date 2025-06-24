@@ -66,8 +66,8 @@
             color: #3b82f6;
         }
         
-        /* Hide nav links on hero page */
-        .nav-links.hero-mode {
+        /* Hide nav links completely */
+        .nav-links {
             display: none;
         }
         
@@ -112,11 +112,23 @@
         }
         
         .hero-grid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero-card-resume {
+            width: 200px;
+        }
+        
+        .hero-grid-bottom {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 1.5rem;
             max-width: 600px;
-            margin: 0 auto;
         }
         
         .hero-card {
@@ -328,6 +340,10 @@
             background: linear-gradient(135deg, #10b981 0%, #047857 100%);
         }
         
+        .mercedes-header {
+            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+        }
+        
         .case-header h2 {
             font-size: 2.5rem;
             font-weight: 800;
@@ -371,6 +387,11 @@
             border-color: #bbf7d0;
         }
         
+        .mercedes-metric {
+            background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%);
+            border-color: #c7d2fe;
+        }
+        
         .metric-value {
             font-size: 2rem;
             font-weight: 800;
@@ -383,6 +404,10 @@
         
         .asana-metric .metric-value {
             color: #047857;
+        }
+        
+        .mercedes-metric .metric-value {
+            color: #4f46e5;
         }
         
         .metric-label {
@@ -422,6 +447,10 @@
             background: linear-gradient(135deg, #10b981, #047857);
         }
         
+        .mercedes-section .case-section-title::before {
+            background: linear-gradient(135deg, #6366f1, #4f46e5);
+        }
+        
         .content-block {
             background: #ffffff;
             padding: 2rem;
@@ -444,6 +473,11 @@
         .voc-solution {
             border-left: 4px solid #3b82f6;
             background: linear-gradient(135deg, #f0f9ff 0%, #f8fafc 100%);
+        }
+        
+        .mercedes-solution {
+            border-left: 4px solid #6366f1;
+            background: linear-gradient(135deg, #f0f4ff 0%, #f8fafc 100%);
         }
         
         .impact-list {
@@ -485,6 +519,11 @@
         .asana-highlight {
             color: #047857;
             background: linear-gradient(135deg, #dcfce7, #bbf7d0);
+        }
+        
+        .mercedes-highlight {
+            color: #4f46e5;
+            background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
         }
         
         /* Plan Section */
@@ -753,11 +792,12 @@
     <nav class="nav">
         <div class="nav-container">
             <div class="nav-logo">James Bonaguro</div>
-            <ul class="nav-links hero-mode">
+            <ul class="nav-links">
                 <li><a href="#hero" class="nav-link active">Home</a></li>
                 <li><a href="#resume" class="nav-link">Resume</a></li>
                 <li><a href="#voc" class="nav-link">VoC Case Study</a></li>
                 <li><a href="#asana" class="nav-link">Asana Case Study</a></li>
+                <li><a href="#mercedes" class="nav-link">Mercedes Case Study</a></li>
                 <li><a href="#plan" class="nav-link">30-60-90 Plan</a></li>
             </ul>
         </div>
@@ -767,30 +807,37 @@
     <section id="hero" class="hero">
         <div class="hero-content">
             <h1 class="hero-name">James Anthony Bonaguro</h1>
-            <p class="hero-tagline">Go-to-Market Strategy and Business Development Leader</p>
+            <p class="hero-tagline">Go-to-Market Strategy • Business Development Leader • Sales Professional</p>
             <div class="hero-contact">
                 📧 james.bonaguro@gmail.com | 📱 708-420-5462 | 🔗 linkedin.com/in/jamesbonaguro
             </div>
             
             <div class="hero-grid">
-                <div class="hero-card" data-target="resume">
+                <div class="hero-card hero-card-resume" data-target="resume">
                     <div class="hero-card-icon">📄</div>
                     <div class="hero-card-title">Resume</div>
                 </div>
                 
-                <div class="hero-card" data-target="plan">
-                    <div class="hero-card-icon">🚀</div>
-                    <div class="hero-card-title">30-60-90 Plan</div>
-                </div>
-                
-                <div class="hero-card" data-target="asana">
-                    <div class="hero-card-icon">📘</div>
-                    <div class="hero-card-title">Asana Implementation<br>Case Study</div>
-                </div>
-                
-                <div class="hero-card" data-target="voc">
-                    <div class="hero-card-icon">📊</div>
-                    <div class="hero-card-title">Voice of Customer<br>Case Study</div>
+                <div class="hero-grid-bottom">
+                    <div class="hero-card" data-target="plan">
+                        <div class="hero-card-icon">🚀</div>
+                        <div class="hero-card-title">30-60-90 Plan</div>
+                    </div>
+                    
+                    <div class="hero-card" data-target="asana">
+                        <div class="hero-card-icon">📘</div>
+                        <div class="hero-card-title">Asana Implementation<br>Case Study</div>
+                    </div>
+                    
+                    <div class="hero-card" data-target="voc">
+                        <div class="hero-card-icon">📊</div>
+                        <div class="hero-card-title">Voice of Customer<br>Case Study</div>
+                    </div>
+                    
+                    <div class="hero-card" data-target="mercedes">
+                        <div class="hero-card-icon">🚗</div>
+                        <div class="hero-card-title">Mercedes-Benz<br>Sales Leadership</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -906,6 +953,92 @@
                     <div style="margin-bottom: 0.5rem;"><strong>Career Development Committee Chair</strong>, CCC INTELLIGENT SOLUTIONS: GROWING PROFESSIONALS EMPLOYEE RESOURCE GROUP (2023 – 2024)</div>
                     <div style="margin-bottom: 0.5rem;"><strong>Independent Fundraiser</strong>, JED FOUNDATION (2022 – 2023)</div>
                     <div><strong>Mentor</strong>, CHICAGO LIGHTS TUTORING (2017 – 2019; 2024)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mercedes Case Study Section -->
+    <section id="mercedes" class="section">
+        <div class="section-container">
+            <div class="case-study">
+                <div class="case-header mercedes-header">
+                    <h2>Mercedes-Benz Sales Leadership</h2>
+                    <p>Technology Enhancement Through Authentic Relationships at Orland Park Imports</p>
+                </div>
+                
+                <div class="case-content mercedes-section">
+                    <div style="text-align: center; margin-bottom: 2rem;">
+                        <a href="#" class="case-download-btn" onclick="downloadMercedes()">Download Case Study PDF</a>
+                    </div>
+
+                    <div class="metrics">
+                        <div class="metric mercedes-metric">
+                            <div class="metric-value">$1,900</div>
+                            <div class="metric-label">PVR Above Market Average</div>
+                        </div>
+                        <div class="metric mercedes-metric">
+                            <div class="metric-value">36%</div>
+                            <div class="metric-label">PVR Increase after F&I Software Investments</div>
+                        </div>
+                        <div class="metric mercedes-metric">
+                            <div class="metric-value">3 Days</div>
+                            <div class="metric-label">Faster Deal Funding</div>
+                        </div>
+                        <div class="metric mercedes-metric">
+                            <div class="metric-value">9 Cars</div>
+                            <div class="metric-label">Monthly Average via Referrals</div>
+                        </div>
+                    </div>
+                    
+                    <div class="case-section">
+                        <h3 class="case-section-title">The Challenge</h3>
+                        <div class="content-block challenge">
+                            <p>COVID-19 devastated new car sales due to inventory shortages, forcing strategic resource reallocation at our family's Mercedes-Benz dealership group. As the <span class="mercedes-highlight">succession plan heir at 28</span>, I faced the challenge of maintaining profitability while implementing new technology systems with an incompetent F&I manager.</p>
+                            <p>The critical decision: <span class="mercedes-highlight">reallocate loaner vehicles from sales to service</span> despite pushback from the sales team, recognizing that service labor represented the highest-margin opportunity during the crisis.</p>
+                            <p>Simultaneously, I needed to modernize our F&I process through technology implementation while building authentic customer relationships in a luxury market where trust and personal connection drive repeat business.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="case-section">
+                        <h3 class="case-section-title">Strategic Implementation</h3>
+                        <div class="content-block mercedes-solution">
+                            <p>Led dual technology implementation of <span class="mercedes-highlight">DealerTrack and Darwin e-Contracting systems</span> while developing a relationship-first sales approach that prioritized long-term customer value over short-term transactions.</p>
+                            <p>Leveraged my tech-comfort advantage at 28 to modernize the F&I presentation through iPad-based Darwin system, making the process more professional and customer-friendly while streamlining operations.</p>
+                            <p>Built authentic relationships through genuine service - throwing in floor mats for valued customers, never using pressure tactics, and focusing on solving customer problems rather than pushing products.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="case-section">
+                        <h3 class="case-section-title">Business Impact</h3>
+                        <ul class="impact-list">
+                            <li><span class="mercedes-highlight">Technology-driven efficiency:</span> Reduced deal funding time by 3 days, improving cash flow and customer satisfaction through streamlined electronic processing</li>
+                            <li>Achieved $1,900 PVR, significantly above market average, through enhanced F&I presentation and customer experience</li>
+                            <li>Consistently exceeded sales targets averaging 9 vehicles/month during unprecedented market conditions</li>
+                            <li><span class="mercedes-highlight">Strategic resource optimization:</span> Successfully reallocated loaner inventory to service department, maximizing high-margin service labor revenue</li>
+                            <li>Contributed to family business expansion from 2 to 4 dealerships through operational excellence and relationship building</li>
+                            <li>Developed talent: Promoted 19-year-old car washer Francisco to successful salesperson against management resistance, demonstrating leadership and people development skills</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="case-section">
+                        <h3 class="case-section-title">Leadership Philosophy</h3>
+                        <div class="content-block">
+                            <p><span class="mercedes-highlight">Authentic Relationship Building:</span> Success came from genuine connections rather than sales tactics - customers specifically requested to work with me, demonstrating trust and personal brand strength.</p>
+                            <p><span class="mercedes-highlight">Technology as Enabler:</span> Used Darwin iPad presentations and DealerTrack to enhance rather than replace human connection, making complex F&I processes more accessible and professional.</p>
+                            <p><span class="mercedes-highlight">Strategic Business Thinking:</span> Made difficult resource allocation decisions during crisis, understanding profit centers beyond just car sales (service, F&I, long-term customer value).</p>
+                            <p><span class="mercedes-highlight">Succession Mindset:</span> Operated with owner mentality rather than employee mindset, taking responsibility for business outcomes and long-term success rather than just individual metrics.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="case-section">
+                        <h3 class="case-section-title">Strategic Value for Auto Tech Companies</h3>
+                        <div class="content-block">
+                            <p>This experience demonstrates the critical intersection of <span class="mercedes-highlight">technology implementation</span> and <span class="mercedes-highlight">authentic relationship building</span> that auto tech companies require to succeed in dealership environments.</p>
+                            <p>Having operated within the dealer ecosystem during both growth and crisis periods, I understand the operational challenges, technology adoption barriers, and relationship dynamics that determine whether auto tech solutions succeed or fail.</p>
+                            <p>Most importantly, this background enables authentic conversations with dealers about <span class="mercedes-highlight">real-world implementation challenges</span> and measurable business outcomes rather than theoretical product benefits.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1313,6 +1446,10 @@
         
         function downloadPlan() {
             alert('30-60-90 Plan download would start here. Replace with actual PDF URL.');
+        }
+        
+        function downloadMercedes() {
+            alert('Mercedes Case Study download would start here. Replace with actual PDF URL.');
         }
     </script>
 </body>

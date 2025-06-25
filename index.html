@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,25 +47,6 @@
             color: #3b82f6;
         }
         
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: #64748b;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: #3b82f6;
-        }
-        
-        /* Hide nav links completely */
         .nav-links {
             display: none;
         }
@@ -148,46 +128,6 @@
             border-color: #3b82f6;
         }
         
-        .hero-card.clicked {
-            animation: clickPulse 0.6s ease-out;
-        }
-        
-        @keyframes clickPulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.05); }
-            100% { transform: scale(1); }
-        }
-        
-        /* Scroll indicator */
-        .scroll-indicator {
-            position: fixed;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #3b82f6;
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
-            opacity: 0;
-            transition: all 0.3s ease;
-            pointer-events: none;
-            z-index: 1001;
-        }
-        
-        .scroll-indicator.show {
-            opacity: 1;
-            animation: bounce 1s ease-in-out infinite;
-        }
-        
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
-            40% { transform: translateX(-50%) translateY(-10px); }
-            60% { transform: translateX(-50%) translateY(-5px); }
-        }
-        
         .hero-card-icon {
             font-size: 2rem;
             margin-bottom: 1rem;
@@ -213,6 +153,24 @@
         .section-container {
             max-width: 1000px;
             margin: 0 auto;
+        }
+        
+        /* Section Headers */
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-header h2 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            color: #1e293b;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: #64748b;
         }
         
         /* Resume Section */
@@ -283,414 +241,18 @@
             margin-bottom: 0.5rem;
         }
         
-        /* Case Study Sections */
-        .case-study {
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-            overflow: hidden;
-            margin-top: 2rem;
-        }
-        
-        .case-header {
-            padding: 3rem;
-            text-align: center;
-            color: white;
-            position: relative;
-        }
-        
-        .voc-header {
-            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-        }
-        
-        .asana-header {
-            background: linear-gradient(135deg, #10b981 0%, #047857 100%);
-        }
-        
-        .mercedes-header {
-            background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
-        }
-        
-        .case-header h2 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            margin-bottom: 0.75rem;
-        }
-        
-        .case-header p {
-            font-size: 1.2rem;
-            opacity: 0.95;
-        }
-        
-        .case-content {
-            padding: 3rem;
-        }
-        
-        .metrics {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-        
-        .metric {
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            border: 1px solid #e2e8f0;
-            transition: transform 0.2s ease;
-        }
-        
-        .metric:hover {
-            transform: translateY(-2px);
-        }
-        
-        .voc-metric {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-        }
-        
-        .asana-metric {
-            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-            border-color: #bbf7d0;
-        }
-        
-        .mercedes-metric {
-            background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%);
-            border-color: #c7d2fe;
-        }
-        
-        .metric-value {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 0.5rem;
-        }
-        
-        .voc-metric .metric-value {
-            color: #1e40af;
-        }
-        
-        .asana-metric .metric-value {
-            color: #047857;
-        }
-        
-        .mercedes-metric .metric-value {
-            color: #4f46e5;
-        }
-        
-        .metric-label {
-            font-size: 0.9rem;
-            color: #64748b;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            font-weight: 600;
-        }
-        
-        .case-section {
-            margin-bottom: 2.5rem;
-        }
-        
-        .case-section-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #1e293b;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-        
-        .case-section-title::before {
-            content: '';
-            width: 4px;
-            height: 24px;
-            border-radius: 2px;
-        }
-        
-        .voc-section .case-section-title::before {
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-        }
-        
-        .asana-section .case-section-title::before {
-            background: linear-gradient(135deg, #10b981, #047857);
-        }
-        
-        .mercedes-section .case-section-title::before {
-            background: linear-gradient(135deg, #6366f1, #4f46e5);
-        }
-        
-        .content-block {
-            background: #ffffff;
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-            margin-bottom: 1.5rem;
-        }
-        
-        .challenge {
-            border-left: 4px solid #f59e0b;
-            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
-        }
-        
-        .solution {
-            border-left: 4px solid #10b981;
-            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
-        }
-        
-        .voc-solution {
-            border-left: 4px solid #3b82f6;
-            background: linear-gradient(135deg, #f0f9ff 0%, #f8fafc 100%);
-        }
-        
-        .mercedes-solution {
-            border-left: 4px solid #6366f1;
-            background: linear-gradient(135deg, #f0f4ff 0%, #f8fafc 100%);
-        }
-        
-        .impact-list {
-            list-style: none;
-            padding: 0;
-            display: grid;
-            gap: 1rem;
-        }
-        
-        .impact-list li {
-            background: #ffffff;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #3b82f6;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-            transition: transform 0.2s ease;
-        }
-        
-        .impact-list li:hover {
-            transform: translateX(4px);
-        }
-        
-        .impact-list li::before {
-            content: "✓";
-            color: #3b82f6;
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-right: 0.75rem;
-        }
-        
-        .highlight {
-            font-weight: 700;
-            color: #1e40af;
-            background: linear-gradient(135deg, #dbeafe, #bfdbfe);
-            padding: 2px 6px;
-            border-radius: 4px;
-        }
-        
-        .asana-highlight {
-            color: #047857;
-            background: linear-gradient(135deg, #dcfce7, #bbf7d0);
-        }
-        
-        .mercedes-highlight {
-            color: #4f46e5;
-            background: linear-gradient(135deg, #e0e7ff, #c7d2fe);
-        }
-        
-        /* Plan Section */
-        .plan-section {
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-            padding: 3rem;
-            margin-top: 2rem;
-        }
-        
-        .plan-content {
-            display: grid;
-            gap: 2.5rem;
-        }
-        
-        .plan-phase {
-            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid #e2e8f0;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        
-        .plan-phase:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .plan-phase-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #1e293b;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.75rem;
-            border-bottom: 2px solid #3b82f6;
-        }
-        
-        .plan-list {
-            list-style: none;
-            padding: 0;
-            display: grid;
-            gap: 1rem;
-        }
-        
-        .plan-list li {
-            background: white;
-            padding: 1rem 1.5rem;
-            border-radius: 8px;
-            border-left: 4px solid #3b82f6;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-            transition: transform 0.2s ease;
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-        
-        .plan-list li:hover {
-            transform: translateX(4px);
-        }
-        
-        .plan-list li::before {
-            content: "→";
-            color: #3b82f6;
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-right: 0.75rem;
-        }
-        
-        /* Technical Details Grid */
-        .technical-details {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-        
-        .tech-item {
-            background: #ffffff;
-            padding: 25px;
-            border-radius: 12px;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        
-        .tech-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .tech-title {
-            font-weight: 700;
-            color: #1e293b;
-            margin-bottom: 12px;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .tech-title::before {
-            content: '⚡';
-            font-size: 1.2rem;
-        }
-        
-        .tech-desc {
-            font-size: 0.95rem;
-            color: #64748b;
-            line-height: 1.6;
-        }
-        
-        /* Implementation Phases Grid */
-        .implementation-phases {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-        
-        .phase-item {
-            background: #ffffff;
-            padding: 25px;
-            border-radius: 12px;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        
-        .phase-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .phase-title {
-            font-weight: 700;
-            color: #1e293b;
-            margin-bottom: 12px;
-            font-size: 1.1rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .phase-title::before {
-            content: '🚀';
-            font-size: 1.2rem;
-        }
-        
-        .phase-desc {
-            font-size: 0.95rem;
-            color: #64748b;
-            line-height: 1.6;
-        }
-        
-        /* Section Headers */
-        .section-header {
-            text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-        
-        .section-header h2 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 1rem;
-            color: #1e293b;
-        }
-        
-        .section-header p {
-            font-size: 1.2rem;
-            color: #64748b;
-        }
-        
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-        
         /* Responsive */
         @media (max-width: 768px) {
             .hero-name {
                 font-size: 2.5rem;
             }
             
-            .nav-links {
-                display: none;
-            }
-            
             .section {
                 padding: 4rem 1rem;
             }
             
-            .case-content,
-            .resume-content,
-            .plan-section {
+            .resume-content {
                 padding: 2rem;
-            }
-            
-            .metrics {
-                grid-template-columns: 1fr;
             }
             
             .hero-grid-bottom {
@@ -704,14 +266,6 @@
     <nav class="nav">
         <div class="nav-container">
             <div class="nav-logo">James Bonaguro</div>
-            <ul class="nav-links">
-                <li><a href="#hero" class="nav-link active">Home</a></li>
-                <li><a href="#resume" class="nav-link">Resume</a></li>
-                <li><a href="#voc" class="nav-link">VoC Case Study</a></li>
-                <li><a href="#asana" class="nav-link">Asana Case Study</a></li>
-                <li><a href="#mercedes" class="nav-link">Mercedes Case Study</a></li>
-                <li><a href="#plan" class="nav-link">30-60-90 Plan</a></li>
-            </ul>
         </div>
     </nav>
 
@@ -731,24 +285,24 @@
                 </div>
                 
                 <div class="hero-grid-bottom">
-                    <div class="hero-card" data-target="plan">
-                        <div class="hero-card-icon">🚀</div>
-                        <div class="hero-card-title">30-60-90 Plan</div>
-                    </div>
-                    
-                    <div class="hero-card" data-target="asana">
+                    <div class="hero-card">
                         <div class="hero-card-icon">📘</div>
                         <div class="hero-card-title">Asana Implementation<br>Case Study</div>
                     </div>
                     
-                    <div class="hero-card" data-target="voc">
+                    <div class="hero-card">
                         <div class="hero-card-icon">📊</div>
                         <div class="hero-card-title">Voice of Customer<br>Case Study</div>
                     </div>
                     
-                    <div class="hero-card" data-target="mercedes">
+                    <div class="hero-card">
                         <div class="hero-card-icon">🚗</div>
                         <div class="hero-card-title">Mercedes-Benz<br>Sales Leadership</div>
+                    </div>
+                    
+                    <div class="hero-card">
+                        <div class="hero-card-icon">🚀</div>
+                        <div class="hero-card-title">30-60-90 Plan</div>
                     </div>
                 </div>
             </div>
@@ -756,7 +310,7 @@
     </section>
 
     <!-- Resume Section -->
-    <section id="resume" class="section">
+    <section id="resume" class="section active">
         <div class="section-container">
             <div class="section-header">
                 <h2>Resume</h2>
@@ -880,360 +434,27 @@
         </div>
     </section>
 
-    <!-- Mercedes Case Study Section -->
-    <section id="mercedes" class="section">
-        <div class="section-container">
-            <div class="case-study">
-                <div class="case-header mercedes-header">
-                    <h2>Mercedes-Benz Sales Leadership</h2>
-                    <p>Technology Enhancement Through Authentic Relationships at Orland Park Imports</p>
-                </div>
-                
-                <div class="case-content mercedes-section">
-                    <div class="metrics">
-                        <div class="metric mercedes-metric">
-                            <div class="metric-value">$1,900</div>
-                            <div class="metric-label">PVR Above Market Average</div>
-                        </div>
-                        <div class="metric mercedes-metric">
-                            <div class="metric-value">36%</div>
-                            <div class="metric-label">PVR Increase after F&I Software Investments</div>
-                        </div>
-                        <div class="metric mercedes-metric">
-                            <div class="metric-value">3 Days</div>
-                            <div class="metric-label">Faster Deal Funding</div>
-                        </div>
-                        <div class="metric mercedes-metric">
-                            <div class="metric-value">9 Cars</div>
-                            <div class="metric-label">Monthly Average via Referrals</div>
-                        </div>
-                    </div>
-                    
-                    <div class="case-section">
-                        <h3 class="case-section-title">The Challenge</h3>
-                        <div class="content-block challenge">
-                            <p>COVID-19 devastated new car sales due to inventory shortages, forcing strategic resource reallocation at our family's Mercedes-Benz dealership group. As the <span class="mercedes-highlight">succession plan heir at 28</span>, I faced the challenge of maintaining profitability while implementing new technology systems with an incompetent F&I manager.</p>
-                            <p>The critical decision: <span class="mercedes-highlight">reallocate loaner vehicles from sales to service</span> despite pushback from the sales team, recognizing that service labor represented the highest-margin opportunity during the crisis.</p>
-                            <p>Simultaneously, I needed to modernize our F&I process through technology implementation while building authentic customer relationships in a luxury market where trust and personal connection drive repeat business.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="case-section">
-                        <h3 class="case-section-title">Strategic Implementation</h3>
-                        <div class="content-block mercedes-solution">
-                            <p>Led dual technology implementation of <span class="mercedes-highlight">DealerTrack and Darwin e-Contracting systems</span> while developing a relationship-first sales approach that prioritized long-term customer value over short-term transactions.</p>
-                            <p>Leveraged my tech-comfort advantage at 28 to modernize the F&I presentation through iPad-based Darwin system, making the process more professional and customer-friendly while streamlining operations.</p>
-                            <p>Built authentic relationships through genuine service - throwing in floor mats for valued customers, never using pressure tactics, and focusing on solving customer problems rather than pushing products.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="case-section">
-                        <h3 class="case-section-title">Business Impact</h3>
-                        <ul class="impact-list">
-                            <li><span class="mercedes-highlight">Technology-driven efficiency:</span> Reduced deal funding time by 3 days, improving cash flow and customer satisfaction through streamlined electronic processing</li>
-                            <li>Achieved $1,900 PVR, significantly above market average, through enhanced F&I presentation and customer experience</li>
-                            <li>Consistently exceeded sales targets averaging 9 vehicles/month during unprecedented market conditions</li>
-                            <li><span class="mercedes-highlight">Strategic resource optimization:</span> Successfully reallocated loaner inventory to service department, maximizing high-margin service labor revenue</li>
-                            <li>Contributed to family business expansion from 2 to 4 dealerships through operational excellence and relationship building</li>
-                            <li>Developed talent: Promoted 19-year-old car washer Francisco to successful salesperson against management resistance, demonstrating leadership and people development skills</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="case-section">
-                        <h3 class="case-section-title">Leadership Philosophy</h3>
-                        <div class="content-block">
-                            <p><span class="mercedes-highlight">Authentic Relationship Building:</span> Success came from genuine connections rather than sales tactics - customers specifically requested to work with me, demonstrating trust and personal brand strength.</p>
-                            <p><span class="mercedes-highlight">Technology as Enabler:</span> Used Darwin iPad presentations and DealerTrack to enhance rather than replace human connection, making complex F&I processes more accessible and professional.</p>
-                            <p><span class="mercedes-highlight">Strategic Business Thinking:</span> Made difficult resource allocation decisions during crisis, understanding profit centers beyond just car sales (service, F&I, long-term customer value).</p>
-                            <p><span class="mercedes-highlight">Succession Mindset:</span> Operated with owner mentality rather than employee mindset, taking responsibility for business outcomes and long-term success rather than just individual metrics.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- VoC Case Study Section -->
-    <section id="voc" class="section">
-        <div class="section-container">
-            <div class="case-study">
-                <div class="case-header voc-header">
-                    <h2>Voice of Customer Program Transformation</h2>
-                    <p>Building Enterprise Customer Intelligence Automation System at CCC Intelligent Solutions</p>
-                </div>
-                
-                <div class="case-content voc-section">
-                    <div class="metrics">
-                        <div class="metric voc-metric">
-                            <div class="metric-value">Real-Time</div>
-                            <div class="metric-label">Customer Feedback</div>
-                        </div>
-                        <div class="metric voc-metric">
-                            <div class="metric-value">90%</div>
-                            <div class="metric-label">Reduction in Manual Work</div>
-                        </div>
-                        <div class="metric voc-metric">
-                            <div class="metric-value">Universal</div>
-                            <div class="metric-label">Customer View</div>
-                        </div>
-                        <div class="metric voc-metric">
-                            <div class="metric-value">115%</div>
-                            <div class="metric-label">Satisfaction Improvement</div>
-                        </div>
-                    </div>
-                    
-                    <div class="case-section">
-                        <h3 class="case-section-title">The Challenge</h3>
-                        <div class="content-block challenge">
-                            <p>CCC Intelligent Solutions had <span class="highlight">limited visibility into customer satisfaction</span> and post-implementation feedback across their comprehensive software portfolio. The organization lacked a systematic approach to capture customer sentiment after implementations, deliveries, software updates, and training sessions.</p>
-                            <p>The existing feedback collection process had <span class="highlight">several operational challenges</span>: survey questions varied across teams, manual distribution processes sometimes missed customers, and collected responses weren't consistently routed for follow-up action.</p>
-                            <p>Product managers, trainers, and implementation teams needed <span class="highlight">a centralized feedback system</span> to understand customer outcomes and drive continuous improvement. Leadership required reliable customer intelligence to support data-driven strategic decisions.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="case-section">
-                        <h3 class="case-section-title">The Solution</h3>
-                        <div class="content-block voc-solution">
-                            <p>Designed and led implementation of <span class="highlight">enterprise customer intelligence automation system</span> that transformed CCC's relationship with their automotive ecosystem.</p>
-                            <p>Collaborated directly with Salesforce development teams to architect real-time survey distribution system with automated workflows, standardized data collection, and interactive executive dashboards.</p>
-                            <p>Conducted comprehensive UATD (User Acceptance Testing and Documentation) to ensure system reliability and user adoption across diverse stakeholder groups.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="case-section">
-                        <h3 class="case-section-title">Business Impact</h3>
-                        <ul class="impact-list">
-                            <li><span class="highlight">Immediate customer recovery system:</span> Customers providing negative feedback received immediate phone calls for issue resolution, transforming potential churn into customer loyalty</li>
-                            <li>Transformed organizational decision-making from assumptions to data-driven customer intelligence</li>
-                            <li>Established systematic accountability loop ensuring every customer interaction drives measurable outcomes</li>
-                            <li>Created standardized customer intelligence framework enabling reliable NPS tracking and performance comparison</li>
-                            <li>Delivered weekly strategic insights to sales, product, and executive leadership teams for immediate action</li>
-                            <li>Implemented automated Salesforce triggers ensuring every piece of customer feedback generates appropriate follow-up</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="case-section">
-                        <h3 class="case-section-title">Technical Implementation</h3>
-                        <div class="technical-details">
-                            <div class="tech-item">
-                                <div class="tech-title">Salesforce Integration</div>
-                                <div class="tech-desc">Built custom workflow triggers and automation rules that eliminated manual survey distribution while maintaining data quality and compliance standards.</div>
-                            </div>
-                            
-                            <div class="tech-item">
-                                <div class="tech-title">Real-Time Automation</div>
-                                <div class="tech-desc">Implemented immediate survey distribution upon implementation completion, with automated reminder sequences and escalation protocols.</div>
-                            </div>
-                            
-                            <div class="tech-item">
-                                <div class="tech-title">Interactive Dashboards</div>
-                                <div class="tech-desc">Developed live-updating executive dashboards providing both product and sales teams with actionable customer insights for immediate response.</div>
-                            </div>
-                            
-                            <div class="tech-item">
-                                <div class="tech-title">Standardization at Scale</div>
-                                <div class="tech-desc">Created unified survey methodology across diverse customer segments while maintaining relevance for repair shops, dealerships, insurance carriers, and OEMs.</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Asana Case Study Section -->
-    <section id="asana" class="section">
-        <div class="section-container">
-            <div class="case-study">
-                <div class="case-header asana-header">
-                    <h2>Asana Enterprise Implementation</h2>
-                    <p>Transforming Go-to-Market Operations at CCC Intelligent Solutions</p>
-                </div>
-                
-                <div class="case-content asana-section">
-                    <div class="metrics">
-                        <div class="metric asana-metric">
-                            <div class="metric-value">150+</div>
-                            <div class="metric-label">Users Onboarded</div>
-                        </div>
-                        <div class="metric asana-metric">
-                            <div class="metric-value">>25%</div>
-                            <div class="metric-label">GTM Organization Productivity Increase</div>
-                        </div>
-                        <div class="metric asana-metric">
-                            <div class="metric-value">4 Weeks</div>
-                            <div class="metric-label">Faster Product Launches</div>
-                        </div>
-                        <div class="metric asana-metric">
-                            <div class="metric-value">6 Product Lines</div>
-                            <div class="metric-label">Standardized Workflows</div>
-                        </div>
-                    </div>
-                    
-                    <div class="case-section">
-                        <h3 class="case-section-title">The Challenge</h3>
-                        <div class="content-block challenge">
-                            <p>CCC's go-to-market operations were <span class="asana-highlight">distributed across multiple systems and workflows</span> as the organization had grown rapidly. Teams used various tools including email chains, SharePoint repositories, and different project management approaches across product lines.</p>
-                            <p>This created <span class="asana-highlight">operational inefficiencies</span> and communication gaps that slowed product launches and made cross-functional collaboration challenging. Information was scattered across platforms, making it difficult to maintain visibility into project status and deliverables.</p>
-                            <p>The organization needed <span class="asana-highlight">unified project management infrastructure</span> to support continued growth, but implementation required comprehensive change management to ensure adoption across diverse teams and established workflows.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="case-section">
-                        <h3 class="case-section-title">Implementation Strategy</h3>
-                        <div class="content-block solution">
-                            <p>Led comprehensive <span class="asana-highlight">Asana enterprise rollout</span> across 150+ stakeholders spanning entire organization.</p>
-                            <p>Developed standardized workflows, templates, and project structures where all go-to-market activities were housed in one single location with <span class="asana-highlight">full visibility and accountability</span> for every team member and project.</p>
-                            <p>Conducted extensive training programs and built comprehensive support infrastructure to ensure adoption across diverse team functions, with ongoing optimization based on user feedback and organizational growth.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="case-section">
-                        <h3 class="case-section-title">Implementation Phases</h3>
-                        <div class="implementation-phases">
-                            <div class="phase-item">
-                                <div class="phase-title">Discovery & Planning</div>
-                                <div class="phase-desc">Analyzed existing workflows, identified pain points, and recruited champions across all go-to-market functions to build internal advocacy network and drive organizational buy-in.</div>
-                            </div>
-                            
-                            <div class="phase-item">
-                                <div class="phase-title">Template Development</div>
-                                <div class="phase-desc">Created standardized project templates with daily and weekly optimization, developed new onboarding processes, license management systems, and created organizational hype video to drive excitement and adoption.</div>
-                            </div>
-                            
-                            <div class="phase-item">
-                                <div class="phase-title">Support Infrastructure</div>
-                                <div class="phase-desc">Established dedicated support portal, email helpdesk, resource team within Asana, and continuous user feedback surveys to ensure sustained adoption and ongoing optimization.</div>
-                            </div>
-                            
-                            <div class="phase-item">
-                                <div class="phase-title">Enterprise Deployment</div>
-                                <div class="phase-desc">Executed phased rollout with comprehensive training, change management campaign, and support systems that enabled rapid organic expansion beyond original go-to-market scope.</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="case-section">
-                        <h3 class="case-section-title">Measurable Impact</h3>
-                        <ul class="impact-list">
-                            <li>Achieved >25% increase in GTM organization productivity through improved project visibility and coordination</li>
-                            <li>Accelerated product launches and feature releases by up to 4 weeks across all product lines</li>
-                            <li><span class="asana-highlight">Transformed accountability culture:</span> Eliminated excuse-making through transparent task ownership where every person's name was attached to their work</li>
-                            <li>Enhanced go-to-market efficiency through standardized workflows and automated progress tracking</li>
-                            <li>Drove organic expansion beyond original scope - tracking KPIs and migrating entire marketing department from a competing tool to Asana</li>
-                            <li>Created scalable support infrastructure enabling rapid organizational adoption and continuous optimization</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="case-section">
-                        <h3 class="case-section-title">Key Success Factors</h3>
-                        <div class="content-block">
-                            <p><span class="asana-highlight">Change Management Campaign:</span> Overcame resistance through champion recruitment, organizational hype video, and comprehensive support infrastructure rather than just technical implementation.</p>
-                            <p><span class="asana-highlight">Accountability Through Transparency:</span> Transformed organizational culture by making work ownership visible, eliminating the ability to deflect responsibility through system dysfunction.</p>
-                            <p><span class="asana-highlight">Continuous Support System:</span> Established ongoing training programs, user surveys, dedicated help portal, and resource teams to ensure sustained adoption and optimization.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 30-60-90 Plan Section -->
-    <section id="plan" class="section">
-        <div class="section-container">
-            <div class="section-header">
-                <h2>30-60-90 Day Plan</h2>
-                <p>Strategic Approach to Revenue Strategy Analyst Role</p>
-            </div>
-            
-            <div class="plan-section">
-                <div class="plan-content">
-                    <div class="plan-phase">
-                        <h3 class="plan-phase-title">📆 0–30 Days: Learn the Business, Team & Systems</h3>
-                        <ul class="plan-list">
-                            <li>Deep dive into AMER revenue strategy, current initiatives, and key performance metrics</li>
-                            <li>Build relationships across Revenue Strategy, Sales Leadership, RevOps, and cross-functional teams</li>
-                            <li>Shadow team members and document existing processes, tools, and methodologies</li>
-                            <li>Master Salesforce analytics, reporting tools, and strategic planning frameworks</li>
-                            <li>Begin contributing to ongoing projects by Day 15 with regular feedback sessions</li>
-                        </ul>
-                    </div>
-
-                    <div class="plan-phase">
-                        <h3 class="plan-phase-title">🔁 31–60 Days: Execute with Focus, Drive Initial Impact</h3>
-                        <ul class="plan-list">
-                            <li>Lead analysis of sales performance data and identify optimization opportunities</li>
-                            <li>Support business planning and forecasting processes with data-driven insights</li>
-                            <li>Contribute to pipeline analysis and segment-level strategy development</li>
-                            <li>Collaborate on strategic initiative planning and implementation roadmaps</li>
-                            <li>Share process improvement recommendations based on enterprise implementation experience</li>
-                        </ul>
-                    </div>
-
-                    <div class="plan-phase">
-                        <h3 class="plan-phase-title">📈 61–90 Days: Drive Strategic Value, Establish Expertise</h3>
-                        <ul class="plan-list">
-                            <li>Own strategic analysis projects and present findings to Sales Leadership</li>
-                            <li>Develop specialized insights into customer implementation success factors</li>
-                            <li>Lead cross-functional initiatives to optimize GTM processes and tools</li>
-                            <li>Establish regular strategic review cadence and identify expansion opportunities</li>
-                            <li>Contribute unique perspective on enterprise customer needs and implementation challenges</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Scroll Indicator -->
-    <div class="scroll-indicator" id="scrollIndicator">
-        ↓ Scroll down to view content
-    </div>
-
     <script>
-        // Handle hero card clicks
+        // Basic functionality for hero cards
         document.querySelectorAll('.hero-card').forEach(card => {
             card.addEventListener('click', (e) => {
                 const targetId = card.getAttribute('data-target');
-                
-                // Add click animation
-                card.classList.add('clicked');
-                setTimeout(() => {
-                    card.classList.remove('clicked');
-                }, 600);
-                
-                // Show scroll indicator
-                const scrollIndicator = document.getElementById('scrollIndicator');
-                scrollIndicator.classList.add('show');
-                
-                // Hide scroll indicator after 3 seconds
-                setTimeout(() => {
-                    scrollIndicator.classList.remove('show');
-                }, 3000);
-                
-                // Hide all sections first
-                const sections = document.querySelectorAll('.section');
-                sections.forEach(section => section.classList.remove('active'));
-                
-                // Show target section
-                const targetSection = document.getElementById(targetId);
-                if (targetSection) {
-                    targetSection.classList.add('active');
+                if (targetId) {
+                    // Hide all sections
+                    const sections = document.querySelectorAll('.section');
+                    sections.forEach(section => section.classList.remove('active'));
                     
-                    // Smooth scroll to the section
-                    setTimeout(() => {
+                    // Show target section
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.classList.add('active');
                         targetSection.scrollIntoView({ 
                             behavior: 'smooth',
                             block: 'start'
                         });
-                    }, 300);
+                    }
                 }
             });
-        });
-        
-        // Scroll to top when page loads
-        window.addEventListener('load', () => {
-            window.scrollTo(0, 0);
         });
     </script>
 </body>

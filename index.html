@@ -199,39 +199,6 @@
             color: #1e293b;
         }
         
-        .btn {
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 50px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .btn-primary {
-            background: white;
-            color: #667eea;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-        
-        .btn-secondary:hover {
-            background: white;
-            color: #667eea;
-            transform: translateY(-2px);
-        }
-        
         /* Content Sections */
         .section {
             min-height: 100vh;
@@ -697,65 +664,6 @@
             color: #64748b;
         }
         
-        /* Download Button */
-        .download-btn {
-            background: #3b82f6;
-            color: white;
-            padding: 0.75rem 1.25rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
-            margin-top: 1rem;
-        }
-        
-        .download-btn:hover {
-            background: #2563eb;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(59, 130, 246, 0.4);
-        }
-        
-        .download-btn::before {
-            content: '📄';
-            font-size: 1rem;
-        }
-        
-        /* Download button for case studies */
-        .case-download-btn {
-            position: absolute;
-            top: 2rem;
-            right: 2rem;
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            padding: 0.75rem 1.25rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-        
-        .case-download-btn:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
-        }
-        
-        .case-download-btn::before {
-            content: '📄';
-            font-size: 1rem;
-        }
-        
         /* Smooth scrolling */
         html {
             scroll-behavior: smooth;
@@ -763,7 +671,7 @@
         
         /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 {
+            .hero-name {
                 font-size: 2.5rem;
             }
             
@@ -782,6 +690,10 @@
             }
             
             .metrics {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero-grid-bottom {
                 grid-template-columns: 1fr;
             }
         }
@@ -807,7 +719,7 @@
     <section id="hero" class="hero">
         <div class="hero-content">
             <h1 class="hero-name">James Anthony Bonaguro</h1>
-            <p class="hero-tagline">Go-to-Market Strategy • Business Development Leader • Sales Professional</p>
+            <p class="hero-tagline">Go-to-Market Strategy • Revenue Operations • Enterprise Software Implementation</p>
             <div class="hero-contact">
                 📧 james.bonaguro@gmail.com | 📱 708-420-5462 | 🔗 linkedin.com/in/jamesbonaguro
             </div>
@@ -848,13 +760,12 @@
         <div class="section-container">
             <div class="section-header">
                 <h2>Resume</h2>
-                <p>Business Development Professional with Enterprise Software Expertise</p>
-                <a href="#" class="download-btn" onclick="downloadResume()">Download PDF</a>
+                <p>Go-to-Market Strategy & Revenue Operations Professional</p>
             </div>
             
             <div class="resume-content">
                 <div class="resume-header">
-                    <div class="resume-name">JAMES BONAGURO</div>
+                    <div class="resume-name">JAMES ANTHONY BONAGURO</div>
                     <div class="resume-contact">
                         Orland Park, IL 60467 | 708-420-5462<br>
                         james.bonaguro@gmail.com | linkedin.com/in/jamesbonaguro
@@ -863,16 +774,18 @@
 
                 <div class="resume-section">
                     <div class="resume-section-title">SUMMARY</div>
-                    <p>Results-driven business development professional with proven expertise in enterprise software adoption and B2B relationship building. Combines deep industry knowledge with strategic technology implementation experience, having led cross-functional teams to accelerate product launches and drive customer success. Demonstrates exceptional ability to translate complex technical solutions into clear business value propositions for C-suite decision-makers.</p>
+                    <p>Revenue Strategy & Operations Professional with proven expertise in GTM transformation, cross-functional collaboration, and enterprise software implementation. Combines strategic analytical thinking with hands-on operational experience, having led multi-departmental initiatives that accelerated product launches and drove measurable business outcomes. Demonstrates exceptional ability to partner with Sales leadership while translating complex operational challenges into strategic solutions.</p>
                 </div>
 
                 <div class="resume-section">
-                    <div class="resume-section-title">CORE SKILLS</div>
-                    <p>Enterprise Software Implementation & Adoption | Cross-Functional Collaboration | Relationship Development | Strategic Outreach & Prospecting | Executive Communication | Process Optimization & Change Management | Integrity</p>
+                    <div class="resume-section-title">CORE COMPETENCIES</div>
+                    <p><strong>Strategy & Operations:</strong> GTM Strategy Development | Business Planning & Forecasting | Pipeline Analysis | Cross-Functional Project Leadership | Process Optimization | Strategic Initiative Management<br><br>
+                    <strong>Technical & Analytical:</strong> Salesforce CRM | Asana Enterprise Implementation | Aha! Product Management Platform | Data Analysis & Modeling | Workflow Automation | Performance Metrics & KPIs | Executive Dashboard Development<br><br>
+                    <strong>Leadership & Communication:</strong> Stakeholder Management | Executive Communication | Change Management | Vendor Negotiation | Team Collaboration | Strategic Influence</p>
                 </div>
 
                 <div class="resume-section">
-                    <div class="resume-section-title">WORK EXPERIENCE</div>
+                    <div class="resume-section-title">PROFESSIONAL EXPERIENCE</div>
                     
                     <div class="job">
                         <div class="job-header">
@@ -886,10 +799,10 @@
                             </div>
                         </div>
                         <ul>
-                            <li>Built strategic partnerships with premier expert networks (Dialecta, AlphaSights, Third Bridge), generating 21+ high-value consulting engagements through targeted relationship development.</li>
-                            <li>Develop and maintain executive relationships with institutional investors, PE firms, and research analysts through consultative outreach and specialized automotive SaaS market expertise.</li>
-                            <li>Deliver compelling value propositions by translating complex B2B SaaS product capabilities into clear business insights for sophisticated decision-makers.</li>
-                            <li>Lead technology evaluation discussions with investors, identifying market opportunities and addressing strategic pain points within the automotive SaaS ecosystem.</li>
+                            <li>Partner with institutional investors, PE firms, and research analysts on strategic market analysis and technology evaluation within automotive SaaS ecosystem</li>
+                            <li>Built strategic partnerships with premier expert networks (Dialecta, AlphaSights, Third Bridge), generating 21+ high-value consulting engagements through targeted relationship development</li>
+                            <li>Deliver executive insights by translating complex B2B SaaS capabilities into strategic business recommendations for sophisticated decision-makers</li>
+                            <li>Lead technology evaluation discussions identifying market opportunities and addressing strategic pain points across enterprise software implementations</li>
                         </ul>
                     </div>
 
@@ -905,11 +818,12 @@
                             </div>
                         </div>
                         <ul>
-                            <li>Implemented Asana for 150+ users, providing continuous staff education, leading to a 20% increase in sales productivity.</li>
-                            <li>Developed and continuously refined models, templates, and workflows in Aha! and Asana, enhancing Go-to-Market efficiency across entire product suite by actively soliciting user feedback and implementing iterative improvements.</li>
-                            <li>Transformed Voice of Customer program through strategic survey design and automated distribution, providing sales team with real-time insights, leading to a 115% improvement in customer-reported quality of service.</li>
-                            <li>Created prioritization process aligning Product, Sales, and Development teams, accelerating feature delivery by up to 2 quarters and increasing conversion rates by ~12%.</li>
-                            <li>Managed Asana, Aha!, and Qualtrics platforms, including vendor relationships and contract negotiations.</li>
+                            <li><strong>Strategic Initiatives & Cross-Functional Leadership:</strong> Co-led GTM strategy optimization across 6 product lines, developing standardized workflows and templates that enhanced operational efficiency across entire product suite</li>
+                            <li><strong>Revenue Operations:</strong> Created strategic prioritization process aligning Product, Sales, and Development teams, accelerating feature delivery by up to 2 quarters and increasing conversion rates by ~12%</li>
+                            <li><strong>Enterprise Implementation:</strong> Architected Asana enterprise rollout for 150+ users spanning sales, marketing, and product teams, achieving >25% productivity increase through improved project visibility and coordination</li>
+                            <li><strong>Product Management Platform Implementation:</strong> Co-led Aha! implementation for Product Management department, building custom templates and workflow designs while providing comprehensive user training and adoption support</li>
+                            <li><strong>Data-Driven Operations:</strong> Transformed Voice of Customer program through strategic survey design and automated Salesforce distribution, providing sales team with real-time customer intelligence and achieving 90% reduction in manual work</li>
+                            <li><strong>Platform Management:</strong> Managed vendor relationships and contract negotiations for Asana, Aha!, and Qualtrics platforms while optimizing operational processes and delivering weekly strategic insights to leadership teams</li>
                         </ul>
                     </div>
 
@@ -925,11 +839,10 @@
                             </div>
                         </div>
                         <ul>
-                            <li>Trained across sales, finance, and service departments as part of a succession plan, contributing to the expansion of the family-owned Mercedes-Benz luxury dealership group from 2 to 4 dealerships prior to acquisition.</li>
-                            <li>Implemented DealerTrack and Darwin e-Contracting, boosting PVR by 36% and accelerating deal funding by 3 business days.</li>
-                            <li>Drove a 10-12% monthly increase in financing approvals, optimizing customer satisfaction and deal closures.</li>
-                            <li>Achieved $1,900 PVR, significantly above market average, and consistently beat sales targets by averaging 9 vehicles/month.</li>
-                            <li>Cultivated a relationship-focused sales approach that generated the majority of business through referrals and repeat customers, prioritizing long-term customer value and building brand reputation.</li>
+                            <li><strong>Strategic Business Operations:</strong> Contributed to business expansion from 2 to 4 dealerships through operational excellence and strategic resource allocation during COVID-19 market disruption</li>
+                            <li><strong>Technology Implementation:</strong> Implemented DealerTrack and Darwin e-Contracting systems resulting in 36% PVR increase and 3-day reduction in deal funding timeline</li>
+                            <li><strong>Performance Optimization:</strong> Achieved $1,900 PVR significantly above market average and consistently exceeded targets averaging 9 vehicles/month through relationship-focused approach</li>
+                            <li><strong>Process Excellence:</strong> Drove 10-12% monthly increase in financing approvals through process optimization while building referral-based customer acquisition strategy</li>
                         </ul>
                     </div>
                 </div>
@@ -954,6 +867,15 @@
                     <div style="margin-bottom: 0.5rem;"><strong>Independent Fundraiser</strong>, JED FOUNDATION (2022 – 2023)</div>
                     <div><strong>Mentor</strong>, CHICAGO LIGHTS TUTORING (2017 – 2019)</div>
                 </div>
+
+                <div class="resume-section">
+                    <div class="resume-section-title">KEY ACHIEVEMENTS</div>
+                    <p><strong>GTM Strategy Impact:</strong> >25% productivity increase across 150+ user Asana implementation<br>
+                    <strong>Strategic Acceleration:</strong> 2-quarter reduction in feature delivery timelines<br>
+                    <strong>Process Optimization:</strong> 90% reduction in manual work through workflow automation<br>
+                    <strong>Cross-Functional Leadership:</strong> Successfully managed complex stakeholder alignment across Product, Sales, and Development teams<br>
+                    <strong>Customer Intelligence:</strong> 115% improvement in customer satisfaction through strategic VoC program transformation</p>
+                </div>
             </div>
         </div>
     </section>
@@ -968,10 +890,6 @@
                 </div>
                 
                 <div class="case-content mercedes-section">
-                    <div style="text-align: center; margin-bottom: 2rem;">
-                        <a href="#" class="case-download-btn" onclick="downloadMercedes()">Download Case Study PDF</a>
-                    </div>
-
                     <div class="metrics">
                         <div class="metric mercedes-metric">
                             <div class="metric-value">$1,900</div>
@@ -1030,15 +948,6 @@
                             <p><span class="mercedes-highlight">Succession Mindset:</span> Operated with owner mentality rather than employee mindset, taking responsibility for business outcomes and long-term success rather than just individual metrics.</p>
                         </div>
                     </div>
-                    
-                    <div class="case-section">
-                        <h3 class="case-section-title">Strategic Value for Auto Tech Companies</h3>
-                        <div class="content-block">
-                            <p>This experience demonstrates the critical intersection of <span class="mercedes-highlight">technology implementation</span> and <span class="mercedes-highlight">authentic relationship building</span> that auto tech companies require to succeed in dealership environments.</p>
-                            <p>Having operated within the dealer ecosystem during both growth and crisis periods, I understand the operational challenges, technology adoption barriers, and relationship dynamics that determine whether auto tech solutions succeed or fail.</p>
-                            <p>Most importantly, this background enables authentic conversations with dealers about <span class="mercedes-highlight">real-world implementation challenges</span> and measurable business outcomes rather than theoretical product benefits.</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1054,9 +963,6 @@
                 </div>
                 
                 <div class="case-content voc-section">
-                    <div style="text-align: center; margin-bottom: 2rem;">
-                        <a href="#" class="case-download-btn" onclick="downloadVOC()">Download Case Study PDF</a>
-                    </div>
                     <div class="metrics">
                         <div class="metric voc-metric">
                             <div class="metric-value">Real-Time</div>
@@ -1071,8 +977,8 @@
                             <div class="metric-label">Customer View</div>
                         </div>
                         <div class="metric voc-metric">
-                            <div class="metric-value">2 Quarters</div>
-                            <div class="metric-label">Faster Issue Resolution</div>
+                            <div class="metric-value">115%</div>
+                            <div class="metric-label">Satisfaction Improvement</div>
                         </div>
                     </div>
                     
@@ -1104,10 +1010,6 @@
                             <li>Delivered weekly strategic insights to sales, product, and executive leadership teams for immediate action</li>
                             <li>Implemented automated Salesforce triggers ensuring every piece of customer feedback generates appropriate follow-up</li>
                         </ul>
-                        
-                        <div style="margin-top: 20px; padding: 15px; background: #f1f5f9; border-left: 3px solid #2c3e50;">
-                            <p style="margin: 0; color: #374151;"><span class="highlight">Process Efficiency Gains:</span> 90% reduction in manual work, 115% improvement in customer satisfaction scores, elimination of inconsistent data collection across customer base.</p>
-                        </div>
                     </div>
                     
                     <div class="case-section">
@@ -1134,15 +1036,6 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="case-section">
-                        <h3 class="case-section-title">Strategic Value for Enterprise Software Companies</h3>
-                        <div class="content-block">
-                            <p>This transformation demonstrates the critical intersection of <span class="highlight">technical implementation expertise</span> and <span class="highlight">customer success strategy</span> that enterprise software companies require.</p>
-                            <p>The project showcased ability to collaborate with development teams, manage complex stakeholder requirements, and deliver measurable business outcomes that directly impact revenue and customer retention.</p>
-                            <p>Most importantly, it created a <span class="highlight">scalable framework</span> for understanding customer behavior and driving product decisions based on real-time feedback rather than assumptions.</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1158,9 +1051,6 @@
                 </div>
                 
                 <div class="case-content asana-section">
-                    <div style="text-align: center; margin-bottom: 2rem;">
-                        <a href="#" class="case-download-btn" onclick="downloadAsana()">Download Case Study PDF</a>
-                    </div>
                     <div class="metrics">
                         <div class="metric asana-metric">
                             <div class="metric-value">150+</div>
@@ -1241,16 +1131,6 @@
                             <p><span class="asana-highlight">Change Management Campaign:</span> Overcame resistance through champion recruitment, organizational hype video, and comprehensive support infrastructure rather than just technical implementation.</p>
                             <p><span class="asana-highlight">Accountability Through Transparency:</span> Transformed organizational culture by making work ownership visible, eliminating the ability to deflect responsibility through system dysfunction.</p>
                             <p><span class="asana-highlight">Continuous Support System:</span> Established ongoing training programs, user surveys, dedicated help portal, and resource teams to ensure sustained adoption and optimization.</p>
-                            <p><span class="asana-highlight">Realistic Expectations:</span> Acknowledged implementation challenges while building comprehensive support to overcome resistance and drive meaningful organizational change.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="case-section">
-                        <h3 class="case-section-title">Strategic Value for Asana</h3>
-                        <div class="content-block">
-                            <p>This implementation demonstrates deep understanding of <span class="asana-highlight">Asana's enterprise capabilities</span> and proven ability to drive organizational transformation through effective project management platform adoption.</p>
-                            <p>The experience provides unique insights into enterprise customer needs, implementation challenges, and the critical success factors that determine whether organizations achieve meaningful ROI from Asana investments.</p>
-                            <p>As a Business Development Representative, this background enables authentic conversations with prospects about <span class="asana-highlight">real-world implementation strategies</span> and measurable business outcomes rather than theoretical product benefits.</p>
                         </div>
                     </div>
                 </div>
@@ -1263,42 +1143,41 @@
         <div class="section-container">
             <div class="section-header">
                 <h2>30-60-90 Day Plan</h2>
-                <p>Strategic Approach to Business Development Representative Role</p>
-                <a href="#" class="download-btn" onclick="downloadPlan()">Download PDF</a>
+                <p>Strategic Approach to Revenue Strategy Analyst Role</p>
             </div>
             
             <div class="plan-section">
                 <div class="plan-content">
                     <div class="plan-phase">
-                        <h3 class="plan-phase-title">📆 0–30 Days: Learn the Business, Team & Tools</h3>
+                        <h3 class="plan-phase-title">📆 0–30 Days: Learn the Business, Team & Systems</h3>
                         <ul class="plan-list">
-                            <li>Deep dive into company mission, product capabilities, and go-to-market strategy</li>
-                            <li>Build relationships across BDR, AE, RevOps, and Marketing teams</li>
-                            <li>Shadow top-performing reps and document key methodologies and best practices</li>
-                            <li>Master the tech stack including CRM, sales engagement platform, and conversation intelligence tools</li>
-                            <li>Begin targeted outbound activities by Day 10 with daily coaching and feedback sessions</li>
+                            <li>Deep dive into AMER revenue strategy, current initiatives, and key performance metrics</li>
+                            <li>Build relationships across Revenue Strategy, Sales Leadership, RevOps, and cross-functional teams</li>
+                            <li>Shadow team members and document existing processes, tools, and methodologies</li>
+                            <li>Master Salesforce analytics, reporting tools, and strategic planning frameworks</li>
+                            <li>Begin contributing to ongoing projects by Day 15 with regular feedback sessions</li>
                         </ul>
                     </div>
 
                     <div class="plan-phase">
-                        <h3 class="plan-phase-title">🔁 31–60 Days: Execute with Focus, Iterate with Feedback</h3>
+                        <h3 class="plan-phase-title">🔁 31–60 Days: Execute with Focus, Drive Initial Impact</h3>
                         <ul class="plan-list">
-                            <li>Deliver personalized outreach sequences across email, phone, and social channels</li>
-                            <li>A/B test messaging variations and document performance insights for team knowledge sharing</li>
-                            <li>Refine objection handling through AE collaboration and conversation analysis</li>
-                            <li>Achieve consistent meeting booking targets while maintaining message quality</li>
-                            <li>Contribute process improvements and insights to enhance team-wide performance</li>
+                            <li>Lead analysis of sales performance data and identify optimization opportunities</li>
+                            <li>Support business planning and forecasting processes with data-driven insights</li>
+                            <li>Contribute to pipeline analysis and segment-level strategy development</li>
+                            <li>Collaborate on strategic initiative planning and implementation roadmaps</li>
+                            <li>Share process improvement recommendations based on enterprise implementation experience</li>
                         </ul>
                     </div>
 
                     <div class="plan-phase">
-                        <h3 class="plan-phase-title">📈 61–90 Days: Drive Consistency, Contribute to Culture</h3>
+                        <h3 class="plan-phase-title">📈 61–90 Days: Drive Strategic Value, Establish Expertise</h3>
                         <ul class="plan-list">
-                            <li>Consistently exceed activity and meeting conversion benchmarks</li>
-                            <li>Develop specialized expertise in key verticals or ideal customer profiles</li>
-                            <li>Mentor new team members and support peer development initiatives</li>
-                            <li>Establish regular feedback cadence and discuss advancement opportunities</li>
-                            <li>Strengthen cross-functional partnerships to drive pipeline quality and team success</li>
+                            <li>Own strategic analysis projects and present findings to Sales Leadership</li>
+                            <li>Develop specialized insights into customer implementation success factors</li>
+                            <li>Lead cross-functional initiatives to optimize GTM processes and tools</li>
+                            <li>Establish regular strategic review cadence and identify expansion opportunities</li>
+                            <li>Contribute unique perspective on enterprise customer needs and implementation challenges</li>
                         </ul>
                     </div>
                 </div>
@@ -1312,54 +1191,6 @@
     </div>
 
     <script>
-        // Navigation functionality
-        const navLinks = document.querySelectorAll('.nav-link');
-        const sections = document.querySelectorAll('.section');
-        
-        navLinks.forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                
-                // Remove active class from all links
-                navLinks.forEach(l => l.classList.remove('active'));
-                
-                // Add active class to clicked link
-                link.classList.add('active');
-                
-                // Hide all sections
-                sections.forEach(section => section.classList.remove('active'));
-                
-                // Show target section
-                const targetId = link.getAttribute('href').substring(1);
-                if (targetId === 'hero') {
-                    // For hero, hide all sections
-                    return;
-                }
-                
-                const targetSection = document.getElementById(targetId);
-                if (targetSection) {
-                    targetSection.classList.add('active');
-                }
-            });
-        });
-        
-        // Smooth scroll behavior for hero section
-        document.querySelector('a[href="#hero"]').addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            
-            // Hide all sections to show hero
-            sections.forEach(section => section.classList.remove('active'));
-            
-            // Hide nav links when returning to hero
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.add('hero-mode');
-            
-            // Update active nav link
-            navLinks.querySelectorAll('a').forEach(l => l.classList.remove('active'));
-            document.querySelector('a[href="#hero"]').classList.add('active');
-        });
-        
         // Handle hero card clicks
         document.querySelectorAll('.hero-card').forEach(card => {
             card.addEventListener('click', (e) => {
@@ -1380,19 +1211,11 @@
                     scrollIndicator.classList.remove('show');
                 }, 3000);
                 
-                // Show nav links when leaving hero
-                const navLinks = document.querySelector('.nav-links');
-                navLinks.classList.remove('hero-mode');
-                
-                // Update nav
-                navLinks.querySelectorAll('a').forEach(l => l.classList.remove('active'));
-                const navLink = document.querySelector(`a[href="#${targetId}"]`);
-                if (navLink) {
-                    navLink.classList.add('active');
-                }
-                
-                // Show section
+                // Hide all sections first
+                const sections = document.querySelectorAll('.section');
                 sections.forEach(section => section.classList.remove('active'));
+                
+                // Show target section
                 const targetSection = document.getElementById(targetId);
                 if (targetSection) {
                     targetSection.classList.add('active');
@@ -1408,49 +1231,10 @@
             });
         });
         
-        // Handle hero button clicks
-        document.querySelectorAll('.hero .nav-link').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                
-                const targetId = link.getAttribute('href').substring(1);
-                
-                // Update nav
-                navLinks.forEach(l => l.classList.remove('active'));
-                document.querySelector(`a[href="#${targetId}"]`).classList.add('active');
-                
-                // Show section
-                sections.forEach(section => section.classList.remove('active'));
-                document.getElementById(targetId).classList.add('active');
-            });
-        });
-        
         // Scroll to top when page loads
         window.addEventListener('load', () => {
             window.scrollTo(0, 0);
         });
-        
-        // Download functions
-        function downloadResume() {
-            // You can replace these with actual PDF file URLs
-            alert('Resume download would start here. Replace with actual PDF URL.');
-        }
-        
-        function downloadVOC() {
-            alert('VoC Case Study download would start here. Replace with actual PDF URL.');
-        }
-        
-        function downloadAsana() {
-            alert('Asana Case Study download would start here. Replace with actual PDF URL.');
-        }
-        
-        function downloadPlan() {
-            alert('30-60-90 Plan download would start here. Replace with actual PDF URL.');
-        }
-        
-        function downloadMercedes() {
-            alert('Mercedes Case Study download would start here. Replace with actual PDF URL.');
-        }
     </script>
 </body>
 </html>
